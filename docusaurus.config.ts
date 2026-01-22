@@ -54,7 +54,9 @@ const config: Config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   markdown: {
-    onBrokenMarkdownLinks: "warn",
+    hooks: {
+      onBrokenMarkdownLinks: () => "warn",
+    },
   },
   i18n: {
     defaultLocale: DEFAULT_LOCALE,
